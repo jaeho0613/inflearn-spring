@@ -16,8 +16,8 @@ public class ConcreteProxyTest {
 
     @Test
     void addProxy() {
-        // ConcreteLogic logic = new ConcreteLogic();
-        TimeProxy timeProxy = new TimeProxy();
+        ConcreteLogic logic = new ConcreteLogic();
+        TimeProxy timeProxy = new TimeProxy(logic);
         ConcreteClient client = new ConcreteClient(timeProxy);
         client.execute();
     }
