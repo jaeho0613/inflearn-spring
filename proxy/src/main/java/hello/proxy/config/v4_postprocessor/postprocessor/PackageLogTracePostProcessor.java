@@ -23,7 +23,7 @@ public class PackageLogTracePostProcessor implements BeanPostProcessor {
         String packageName = bean.getClass().getPackageName();
         if (!packageName.startsWith(basePackage)) {
             return bean;
-        }s
+        }
 
         // 프록시 대상이면 프록시를 만들어서 반환
         ProxyFactory proxyFactory = new ProxyFactory(bean);
